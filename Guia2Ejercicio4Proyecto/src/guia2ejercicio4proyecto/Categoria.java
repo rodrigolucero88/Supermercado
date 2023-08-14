@@ -9,6 +9,6 @@ package guia2ejercicio4proyecto;
  * @author Kawaa
  */
 public enum Categoria {
-    COMESTIBLE,LIMPIEZA, PERFUMERIA;
+        COMESTIBLE,LIMPIEZA, PERFUMERIA;
     
 }

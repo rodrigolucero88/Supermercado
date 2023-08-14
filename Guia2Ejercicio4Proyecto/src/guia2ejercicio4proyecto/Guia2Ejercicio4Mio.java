@@ -8,7 +8,7 @@ package guia2ejercicio4proyecto;
  *
  * @author Kawaa
  */
-public class Guia2Ejercicio4Proyecto {
+public class Guia2Ejercicio4Mio {
 
     /**
      * @param args the command line arguments
