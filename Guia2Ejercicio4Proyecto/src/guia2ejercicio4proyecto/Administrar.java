@@ -46,7 +46,7 @@ public class Administrar extends javax.swing.JInternalFrame {
 
         jLabel2.setText("Código");
 
-        jBlupita.setIcon(new javax.swing.ImageIcon(getClass().getResource("/guia2ejercicio4mio/Zoom-icon2.png"))); // NOI18N
+        jBlupita.setIcon(new javax.swing.ImageIcon(getClass().getResource("/guia2ejercicio4proyecto/Zoom-icon2.png"))); // NOI18N
         jBlupita.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jBlupitaActionPerformed(evt);

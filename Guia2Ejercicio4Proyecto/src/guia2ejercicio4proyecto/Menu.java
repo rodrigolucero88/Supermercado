@@ -136,7 +136,7 @@ public class Menu extends javax.swing.JFrame {
         adm.setVisible(true);
         escritorio.add(adm);
         escritorio.moveToFront(adm);
-        adm.configurarComboBox();
+       
     }//GEN-LAST:event_jMenuItem1ActionPerformed
 
     /**

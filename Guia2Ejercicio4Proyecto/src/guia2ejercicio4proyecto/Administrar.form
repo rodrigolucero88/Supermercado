@@ -140,7 +140,7 @@
     <Component class="javax.swing.JButton" name="jBlupita">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/guia2ejercicio4mio/Zoom-icon2.png"/>
+          <Image iconType="3" name="/guia2ejercicio4proyecto/Zoom-icon2.png"/>
         </Property>
       </Properties>
       <Events>
