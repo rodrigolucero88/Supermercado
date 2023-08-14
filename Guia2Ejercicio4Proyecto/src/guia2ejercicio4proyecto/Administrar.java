@@ -59,7 +59,11 @@ public class Administrar extends javax.swing.JInternalFrame {
 
         jLabel5.setText("Rubro");
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Comestible", "Limpieza", "Perfumeria" }));
+        jComboBox1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jComboBox1ActionPerformed(evt);
+            }
+        });
 
         jLabel6.setText("Stock");
 
@@ -215,20 +219,39 @@ if (select != -1) { // berifico si ha valor
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jBlupitaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBlupitaActionPerformed
-       int find = Integer.parseInt(jBlupita.getText());
+         try {
+        int find = Integer.parseInt(jTcod.getText()); // Obtener el código a buscar del campo de texto
+        
         Productos getcodigo = null;
-        for (Productos cod : Menu.lista){
-            if (find == cod.getCodigo()){
-            getcodigo = cod;
-            String code = getcodigo.toString();
-            
-            if (getcodigo != null){
-                jTcod.setText(code);
-            }
-            
+        for (Productos cod : Menu.lista) {
+            if (find == cod.getCodigo()) { 
+                getcodigo = cod;
+                break; 
             }
         }
+        
+        if (getcodigo != null) {
+            
+            jTdesc.setText(getcodigo.getDescripcion()); 
+            jTprecio.setText(String.valueOf(getcodigo.getPrecio())); 
+            jTstock.setText(String.valueOf(getcodigo.getStock())); 
+            
+         
+            Categoria rubroProducto = getcodigo.getRubro(); 
+            jComboBox1.setSelectedItem(rubroProducto);
+        } else {
+           
+        }
+        
+    } catch (NumberFormatException ex) {
+        
+    }
+
     }//GEN-LAST:event_jBlupitaActionPerformed
+
+    private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
+       
+    }//GEN-LAST:event_jComboBox1ActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -250,7 +273,11 @@ if (select != -1) { // berifico si ha valor
     private javax.swing.JTextField jTstock;
     // End of variables declaration//GEN-END:variables
 
- 
+   public void configurarComboBox() {
+        jComboBox1.addItem(Categoria.COMESTIBLE.toString()); // Aquí conviertes la enumeración a una cadena
+        jComboBox1.addItem(Categoria.LIMPIEZA.toString());
+        jComboBox1.addItem(Categoria.PERFUMERIA.toString());
+    }
              
  
 
